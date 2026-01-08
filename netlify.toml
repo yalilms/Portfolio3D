@@ -1,5 +1,5 @@
 [build]
-  command = "cd InteriorPC/portfolio-inner-site && npm install && npm run build && cd ../.. && cp -r InteriorPC/portfolio-inner-site/build/* public/portfolio/ && npm run build"
+  command = "cd InteriorPC/portfolio-inner-site && npm install && npm run build && cd ../.. && mkdir -p public/portfolio && cp -r InteriorPC/portfolio-inner-site/build/* public/portfolio/ && npm install && npm run build"
   publish = "public"
 
 [[redirects]]
