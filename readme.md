@@ -1,6 +1,28 @@
-# henryheffernan.com
+# Portfolio 3D Interactivo - Yalil Musa Talhaoui
 
-This is one of two repositories created for my portfolio website <a href="https://henryheffernan.com/"><samp>henryheffernan.com</samp></a>. If you are looking for the 2D OS repository you can find it <a href="https://github.com/henryjeff/portfolio-inner-site"><samp>here</samp></a>! Thanks for taking the time to check this out. If you have any questions of comments, feel free to shoot me an email at <samp><a href="mailto:henryheffernan@gmail.com">henryheffernan@gmail.com</a></samp> or you can DM me on twitter <a href="https://twitter.com/henryheffernan"><samp>@henryheffernan</samp></a>.
+Portfolio 3D interactivo creado con Three.js, TypeScript y React. Presenta un entorno de oficina 3D con escritorio, monitor interactivo y experiencia inmersiva con audio espacial y animaciones de cámara.
+
+**Autor:** Yalil Musa Talhaoui
+**Email:** <a href="mailto:yalil.ms72@gmail.com"><samp>yalil.ms72@gmail.com</samp></a>
+**LinkedIn:** <a href="https://www.linkedin.com/in/yalil-musa/"><samp>linkedin.com/in/yalil-musa</samp></a>
+**GitHub:** <a href="https://github.com/yalilms"><samp>github.com/yalilms</samp></a>
+
+## Características
+
+- 🎮 Entorno 3D interactivo con Three.js
+- 📱 Responsive y adaptable a diferentes dispositivos
+- 🔊 Audio espacial con efectos de sonido
+- 🎥 Sistema de cámara animado con keyframes
+- ⚡ Hot reload en desarrollo
+- 🎨 UI personalizable con React
+
+## Tecnologías
+
+- **Three.js** - Renderizado 3D
+- **TypeScript** - Tipado estático
+- **React** - Componentes UI
+- **Webpack 5** - Build y bundling
+- **GLSL** - Shaders personalizados
 
 <br>
 

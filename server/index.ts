@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 const compression = require('compression');
 
 const app = express();
-const port = 8080;
+const port = 3001;
 
 app.use(cors());
 app.use(compression());

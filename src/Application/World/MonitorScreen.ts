@@ -183,10 +183,10 @@ export default class MonitorScreen extends EventEmitter {
         };
 
         // Set iframe attributes
-        // PROD
-        iframe.src = 'https://os.henryheffernan.com/';
+        // PROD - Load local portfolio from /portfolio/ directory
+        iframe.src = '/portfolio/';
         /**
-         * Use dev server is query params are present
+         * Use dev server if query params are present
          *
          * Warning: This will not work unless the dev server is running on localhost:3000
          * Also running the dev server causes browsers to freak out over unsecure connections
@@ -204,7 +204,7 @@ export default class MonitorScreen extends EventEmitter {
         iframe.className = 'jitter';
         iframe.id = 'computer-screen';
         iframe.frameBorder = '0';
-        iframe.title = 'HeffernanOS';
+        iframe.title = 'Yalil Musa Portfolio';
 
         // Add iframe to container
         container.appendChild(iframe);

@@ -9,11 +9,20 @@ module.exports = {
         hashFunction: 'xxhash64',
         filename: 'bundle.[contenthash].js',
         path: path.resolve(__dirname, '../public'),
+        clean: {
+            keep: /portfolio\//,
+        },
     },
     devtool: 'source-map',
     plugins: [
         new CopyWebpackPlugin({
-            patterns: [{ from: path.resolve(__dirname, '../static') }],
+            patterns: [
+                {
+                    from: path.resolve(__dirname, '../static'),
+                    to: path.resolve(__dirname, '../public'),
+                    noErrorOnMissing: true
+                }
+            ],
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html'),
@@ -62,10 +71,10 @@ module.exports = {
             },
             // Audio
             {
-                test: /\.(mp3|wav)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]',
+                test: /\.(mp3|wav|ogg)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: '[path][name][ext]',
                 },
             },
             // Fonts

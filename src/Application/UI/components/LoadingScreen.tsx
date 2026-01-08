@@ -149,38 +149,38 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                         <div style={styles.logoContainer}>
                             <div>
                                 <p style={styles.green}>
-                                    <b>Heffernan,</b>{' '}
+                                    <b>Yalil Musa</b>{' '}
                                 </p>
                                 <p style={styles.green}>
-                                    <b>Henry Inc.</b>
+                                    <b>Talhaoui</b>
                                 </p>
                             </div>
                         </div>
                         <div style={styles.headerInfo}>
-                            <p>Released: 01/13/2000</p>
-                            <p>HHBIOS (C)2000 Heffernan Henry Inc.,</p>
+                            <p>Released: 2025</p>
+                            <p>YMBIOS (C)2025 Yalil Musa Talhaoui</p>
                         </div>
                     </div>
                     <div style={styles.body} className="loading-screen-body">
-                        <p>HSP S13 2000-2022 Special UC131S</p>
+                        <p>YMT Portfolio System 2025 Granada Edition</p>
                         <div style={styles.spacer} />
                         {showBiosInfo && (
                             <>
-                                <p>HSP Showcase(tm) XX 113</p>
-                                <p>Checking RAM : {14000} OK</p>
+                                <p>YMT Portfolio 3D(tm) v1.0.0</p>
+                                <p>Verificando RAM : {14000} OK</p>
                                 <div style={styles.spacer} />
                                 <div style={styles.spacer} />
                                 {showLoadingResources ? (
                                     progress == 1 ? (
-                                        <p>FINISHED LOADING RESOURCES</p>
+                                        <p>RECURSOS CARGADOS COMPLETAMENTE</p>
                                     ) : (
                                         <p className="loading">
-                                            LOADING RESOURCES ({loaded}/
+                                            CARGANDO RECURSOS ({loaded}/
                                             {toLoad === 0 ? '-' : toLoad})
                                         </p>
                                     )
                                 ) : (
-                                    <p className="loading">WAIT</p>
+                                    <p className="loading">ESPERE</p>
                                 )}
                             </>
                         )}
@@ -193,9 +193,9 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                         <div style={styles.spacer} />
                         {showLoadingResources && doneLoading && (
                             <p>
-                                All Content Loaded, launching{' '}
+                                Todo el contenido cargado, iniciando{' '}
                                 <b style={styles.green}>
-                                    'Henry Heffernan Portfolio Showcase'
+                                    'Yalil Musa Talhaoui Portfolio 3D'
                                 </b>{' '}
                                 V1.0
                             </p>
@@ -208,8 +208,8 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                         className="loading-screen-footer"
                     >
                         <p>
-                            Press <b>DEL</b> to enter SETUP , <b>ESC</b> to skip
-                            memory test
+                            Presiona <b>DEL</b> para entrar a CONFIGURACIÓN, <b>ESC</b> para saltar
+                            test de memoria
                         </p>
                         <p>{getCurrentDate()}</p>
                     </div>
@@ -227,23 +227,23 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                     <p>But do enjoy what I have done so far :)</p>
                     <div style={styles.spacer} />
                     <div style={styles.spacer} /> */}
-                    <p>Henry Heffernan Portfolio Showcase 2022</p>
+                    <p>Yalil Musa Talhaoui - Portfolio 3D Interactivo 2025</p>
                     {mobileWarning && (
                         <>
                             <br />
                             <b>
                                 <p style={styles.warning}>
-                                    WARNING: This experience is best viewed on
+                                    ADVERTENCIA: Esta experiencia se visualiza mejor en
                                 </p>
                                 <p style={styles.warning}>
-                                    a desktop or laptop computer.
+                                    un ordenador de escritorio o portátil.
                                 </p>
                             </b>
                             <br />
                         </>
                     )}
                     <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-                        <p>Click start to begin{'\xa0'}</p>
+                        <p>Haz clic en INICIAR para comenzar{'\xa0'}</p>
                         <span className="blinking-cursor" />
                     </div>
                     <div
@@ -255,7 +255,7 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                         }}
                     >
                         <div className="bios-start-button" onClick={start}>
-                            <p>START</p>
+                            <p>INICIAR</p>
                         </div>
                     </div>
                 </div>
@@ -268,16 +268,16 @@ const LoadingScreen: React.FC<LoadingProps> = () => {
                 >
                     <div style={styles.startPopup}>
                         <p>
-                            <b style={{ color: 'red' }}>CRITICAL ERROR:</b> No
-                            WebGL Detected
+                            <b style={{ color: 'red' }}>ERROR CRÍTICO:</b> No se
+                            detectó WebGL
                         </p>
                         <div style={styles.spacer} />
                         <div style={styles.spacer} />
 
-                        <p>WebGL is required to run this site.</p>
+                        <p>WebGL es necesario para ejecutar este sitio.</p>
                         <p>
-                            Please enable it or switch to a browser which
-                            supports WebGL
+                            Por favor actívalo o cambia a un navegador que
+                            soporte WebGL
                         </p>
                     </div>
                 </div>

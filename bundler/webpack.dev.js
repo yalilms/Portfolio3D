@@ -20,33 +20,41 @@ module.exports = merge(
         },
         devServer:
         {
-            host: 'local-ip',
+            host: '0.0.0.0',
             port: portFinderSync.getPort(8080),
             open: true,
-            https: false,
+            server: 'http',
             allowedHosts: 'all',
             hot: false,
             watchFiles: ['src/**', 'static/**'],
-            static:
-            {
-                watch: true,
-                directory: path.join(__dirname, '../static')
-            },
+            static: [
+                {
+                    watch: true,
+                    directory: path.join(__dirname, '../static')
+                },
+                {
+                    watch: true,
+                    directory: path.join(__dirname, '../public'),
+                    publicPath: '/'
+                }
+            ],
             client:
             {
                 logging: 'none',
                 overlay: true,
                 progress: false
             },
-            onAfterSetupMiddleware: function(devServer)
+            setupMiddlewares: (middlewares, devServer) =>
             {
                 const port = devServer.options.port
-                const https = devServer.options.https ? 's' : ''
+                const protocol = devServer.options.server === 'https' ? 'https' : 'http'
                 const localIp = ip.address()
-                const domain1 = `http${https}://${localIp}:${port}`
-                const domain2 = `http${https}://localhost:${port}`
-                
+                const domain1 = `${protocol}://${localIp}:${port}`
+                const domain2 = `${protocol}://localhost:${port}`
+
                 console.log(`Project running at:\n  - ${infoColor(domain1)}\n  - ${infoColor(domain2)}`)
+
+                return middlewares
             }
         }
     }
