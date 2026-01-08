@@ -6,7 +6,7 @@ import ResumeDownload from './ResumeDownload';
 
 export interface AboutProps {}
 
-const About: React.FC<AboutProps> = (props) => {
+const About: React.FC<AboutProps> = () => {
     return (
         // add on resize listener
         <div className="site-page-content">

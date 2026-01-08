@@ -13,7 +13,7 @@ import { MusicPlayer } from '../../general';
 
 export interface MusicProjectsProps {}
 
-const MusicProjects: React.FC<MusicProjectsProps> = (props) => {
+const MusicProjects: React.FC<MusicProjectsProps> = () => {
     const [currentSong, setCurrentSong] = useState<string>('');
 
     return (

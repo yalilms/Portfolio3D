@@ -64,7 +64,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
     );
 };
 
-const Projects: React.FC<ProjectsProps> = (props) => {
+const Projects: React.FC<ProjectsProps> = () => {
     return (
         <div className="site-page-content">
             <h1>Projects</h1>

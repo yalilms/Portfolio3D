@@ -5,7 +5,7 @@ import gsts from '../../../assets/pictures/projects/art/gsts.png';
 
 export interface ArtProjectsProps {}
 
-const ArtProjects: React.FC<ArtProjectsProps> = (props) => {
+const ArtProjects: React.FC<ArtProjectsProps> = () => {
     return (
         <div className="site-page-content">
             <h1>Art & Design</h1>
