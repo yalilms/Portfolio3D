@@ -7,7 +7,7 @@
         "start": "node server/index.ts",
         "build": "npm run clean && npm run build:portfolio && npm run build:3d",
         "build:3d": "webpack --config ./bundler/webpack.prod.js",
-        "build:portfolio": "cd InteriorPC/portfolio-inner-site && npm install && npm run build && cd ../.. && mkdir -p dist/portfolio && cp -r InteriorPC/portfolio-inner-site/build/* dist/portfolio/",
+        "build:portfolio": "cd InteriorPC/portfolio-inner-site && npm install && npm run build && cd ../.. && mkdir -p dist/portfolio && cp -r InteriorPC/portfolio-inner-site/build/* dist/portfolio/ && mkdir -p dist/portfolio/js-dos && cp -r InteriorPC/portfolio-inner-site/node_modules/js-dos/dist/* dist/portfolio/js-dos/",
         "dev": "webpack serve --config ./bundler/webpack.dev.js",
         "dev:portfolio": "cd InteriorPC/portfolio-inner-site && npm start"
     },
