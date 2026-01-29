@@ -1,11 +1,13 @@
 {
     "repository": "#",
     "license": "UNLICENSED",
+    "homepage": "/",
     "scripts": {
+        "clean": "rm -rf dist",
         "start": "node server/index.ts",
-        "build": "npm run build:portfolio && npm run build:3d",
+        "build": "npm run clean && npm run build:portfolio && npm run build:3d",
         "build:3d": "webpack --config ./bundler/webpack.prod.js",
-        "build:portfolio": "cd InteriorPC/portfolio-inner-site && npm install && npm run build && cd ../.. && mkdir -p public/portfolio && cp -r InteriorPC/portfolio-inner-site/build/* public/portfolio/",
+        "build:portfolio": "cd InteriorPC/portfolio-inner-site && npm install && npm run build && cd ../.. && mkdir -p dist/portfolio && cp -r InteriorPC/portfolio-inner-site/build/* dist/portfolio/",
         "dev": "webpack serve --config ./bundler/webpack.dev.js",
         "dev:portfolio": "cd InteriorPC/portfolio-inner-site && npm start"
     },

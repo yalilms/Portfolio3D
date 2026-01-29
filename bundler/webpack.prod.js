@@ -4,6 +4,9 @@ const commonConfiguration = require('./webpack.common.js')
 module.exports = merge(
     commonConfiguration,
     {
-        mode: 'production'
+        mode: 'production',
+        output: {
+            publicPath: '/'
+        }
     }
 )

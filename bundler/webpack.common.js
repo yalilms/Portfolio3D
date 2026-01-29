@@ -8,7 +8,7 @@ module.exports = {
     output: {
         hashFunction: 'xxhash64',
         filename: 'bundle.[contenthash].js',
-        path: path.resolve(__dirname, '../public'),
+        path: path.resolve(__dirname, '../dist'),
         clean: {
             keep: /portfolio\//,
         },
@@ -19,7 +19,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, '../static'),
-                    to: path.resolve(__dirname, '../public'),
+                    to: path.resolve(__dirname, '../dist'),
                     noErrorOnMissing: true
                 }
             ],
